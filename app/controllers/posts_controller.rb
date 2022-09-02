@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @posts = Post.all 
@@ -34,8 +35,14 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :text, :image, :date, :address, :evaluation)
   end
 
-  def set_tweet
+  def set_post
     @post = Post.find(params[:id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 
 end
