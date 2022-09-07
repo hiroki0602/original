@@ -7,4 +7,6 @@ class Post < ApplicationRecord
     validates :address
     validates :evaluation
   end
+
+  belongs_to :user
 end
