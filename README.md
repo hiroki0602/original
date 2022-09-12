@@ -19,7 +19,7 @@
 | image            | text       | null: false                    |
 | date             | text       | null: false                    |
 | address          | text       | null: false                    |
-| avaluation       | integer    | null: false                    |
+| evaluation       | integer    | null: false                    |
 | user             | references | null: false, foreign_key: true |
 
 - belongs_to :user
