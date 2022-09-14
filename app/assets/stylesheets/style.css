@@ -1057,3 +1057,21 @@ footer p {
 .search-form .search-btn {
   width: 10%;
 }
+
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 15px;
+}
+
+.maps{
+  display: grid;
+  place-items: center;
+}
+
+.maps_address{
+  text-align: center;  
+}

@@ -16,6 +16,7 @@
       <% end %>
     </ul>
   </div>
+  <%= image_tag post.image.variant(resize: "33%", gravity: "center"), class: 'post-image' if post.image.attached? %>
       
   <p><%= post.text %></p>
   <span class="name">
@@ -24,6 +25,7 @@
     </a>
   </span>
 </div>
+
 <span>■タイトル</span><p><%= post.title %></p>
 <span>■日付</span><p><p><%= post.date %></p>
 <span>■住所</span><p><%= post.address %></p>
