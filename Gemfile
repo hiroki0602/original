@@ -61,3 +61,7 @@ gem "gmaps4rails"
 gem "geocoder"
 gem "gon"
 gem "dotenv-rails"
+
+group :production do
+  gem 'pg'
+end
